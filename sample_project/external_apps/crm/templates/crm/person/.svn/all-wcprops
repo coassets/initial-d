@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/110/trunk/crm/templates/crm/person
+END
+register.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/110/trunk/crm/templates/crm/person/register.html
+END
+new_account_email.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/6/trunk/crm/templates/crm/person/new_account_email.txt
+END
+create_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/110/trunk/crm/templates/crm/person/create_edit.html
+END
+view.html
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/95/trunk/crm/templates/crm/person/view.html
+END
+list.html
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/62/trunk/crm/templates/crm/person/list.html
+END
+address_book.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/crm/templates/crm/person/address_book.xml
+END

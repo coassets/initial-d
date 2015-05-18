@@ -1,0 +1,87 @@
+#menu > ul > li{
+    padding: 15px 15px 4px 15px;	
+}
+#footer-bar .flickr_container .flickr_badge_image a{	
+	text-indent:0;
+}
+#topcontrol{	
+	min-width:40px\9;
+	margin-top: 25px\9; 
+	margin-right: 17px\9;
+}
+@media screen and (max-width: 767px) {
+	.text-homepage{
+		display:block;
+	}
+	.homepage-slider{
+		display:none;
+	}
+	.bg_slider{
+		margin:2px 0 15px 0;	
+	}
+	nav#menu{
+		width:100%;		
+	}
+	.navbar-inner{
+		padding:0;border:0;
+		filter:none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	.container-fluid,.navbar-inner{
+		padding:0;
+	}
+	body{
+		padding:0;
+	}
+	.select-menu{
+		display: block;
+		margin-top:45px;
+		overflow:hidden;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		border-left:0;
+		border-right:0 !important;
+	}
+	#menu ul{
+		display: none;
+	}
+	.navbar{
+		height:140px;
+	}
+	
+	li.span3,div.span3,div.span4,div.span5,div.span6,div.span7,div.span8,div.span9{width:100% !important;}	
+	.row-fluid.services div.span6,.row-fluid .span3,.row-fluid .span4,.row-fluid .span9{
+		padding:0;
+		margin:0;
+	}
+	
+	.text-introdution{
+		margin-bottom:3px;
+	}
+	.navbar-inner.main-menu a.logo{
+		left:50%;
+		margin-left:-79px;
+	}
+	.text-introdution{
+		text-align:center;
+	}
+	#footer-bar .nav{overflow:hidden}
+	#footer-bar .nav li{float:left;}
+	#footer-bar  .nav a:hover{
+		background-color:transparent;
+		color:#f54305;
+	}
+	.services{
+		background-color:#f8f8f8;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		margin-top:-30px;
+	}
+	.services .service{	
+		border-bottom:1px solid #eee;
+	}
+}

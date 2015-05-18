@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'FreigSan';
+	src: url('/static/fonts/FreigSanProBook.eot') ;
+	src: local('☺'), url('/static/fonts/FreigSanProBook.woff') format('woff'), url('/static/fonts/FreigSanProBook.ttf') format('truetype'), url('/static/fonts/FreigSanProBook.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

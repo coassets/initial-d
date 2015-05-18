@@ -1,0 +1,151 @@
+
+/* Body's Background */
+.InvDB{
+    background-color:#f1f1f1;
+}
+
+/*Account Summary*/
+.borderless-shaded{
+    border:none;
+    border-radius:0px!important;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.12);
+}
+
+
+/*Deposit Button*/
+#DepositButtonBox{
+    padding-top:20px;
+    text-align:center;
+}
+
+#DepositButtonBox #deposit_button{
+    color: #fff;
+    background:#e7524b;
+    border:none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+#DepositButtonBox #deposit_button2{
+    color: #fff;
+    background:gray;
+    border:none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/*Withdraw Button*/
+#WithdrawButtonBox{
+    padding-top:20px;
+    text-align:center;
+}
+
+#WithdrawButtonBox #withdraw_button{
+    color: #fff;
+    background:gray;
+    border:none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+
+#MigratingAlert{
+   text-align: center;
+    background: #585858;
+    border-radius:3px;
+}
+
+/*Portfolio*/
+.pro_bar{
+    padding:21px 19px!important;
+}
+
+.pro_bar p{
+    text-align: left;
+}
+
+.pro_bar2{
+   padding:10px 19px 46px 19px!important;
+}
+
+.pro_bar2{
+    text-align: left;
+}
+
+
+/*Deals you are interested in*/
+
+#Offer_Title{
+    float:left;
+    color:grey;
+}
+
+#Offer_Country{
+    color:#5bbefe;
+    font-size:small;
+}
+
+.ProjPhoto{
+    float:right;
+    border-radius: 100%;
+    /*border:1px solid #808080;*/
+    padding: 5px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width:70px;
+    height:70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*Button for Funded Tab*/
+.buttonflat2{
+    border:none!important;
+	background-color: #e54c4c!important;
+	border-radius: 3px;
+    color:#fff;
+}
+
+.buttonflat2:hover, .buttonflat2:visited, .buttonflat2:link, .buttonflat2:active{
+	background-color: #333333!important;
+}
+
+/*Investment_details_stub.html*/
+.PayoutBox{
+   background: rgba(0,0,0,1);
+    color: white;
+    padding:15px;
+    width:150px;
+    margin:auto;
+    border-radius:3px;
+}
+
+.PaidAmt{
+    background: rgba(0,0,0,1);
+    color:white;
+    border-radius:3px!important;
+}
+
+/* Profile Stub */
+#edit-profile-columns{
+    padding:20px;
+    text-align: right;
+}
+
+#edit-password-columns{
+    padding:20px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 40.063em) {
+    #edit-profile-columns{
+        text-align: center;
+    }
+    #edit-password-columns{
+        text-align: center;
+    }
+}

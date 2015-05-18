@@ -1,25 +1,70 @@
-{% extends "base.html" %}
+{% extends "index.html" %} 
+{% block login %} 
+{% endblock %} 
+{% block heroslider %}
+<div class="page_title2" style="padding:150px 0px 50px 0px;">
+    <div class="container">
 
-{% block content %}
+        <h1>Log In</h1>
 
+    </div>
+</div>
+<!-- end page title -->
+{% endblock %} 
+
+{% block main_body %} 
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+<div class="container">
+    <p style="color:#5b5b5b">Your username and password didn't match. Please try again.</p>
+</div>
 {% endif %}
+<div class="row" style="margin-bottom: 40px;">
+    <div class="small-12 columns" style="margin-top: 30px;">
+        <div class="login_form">
+           <div class="sky-form">
+                <header>Log In</header>
+            </div>
+            <form class="logiform" method="post" action="{% url django.contrib.auth.views.login %}">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="large-4 columns">
+                        Username
+                    </div>
+                    <div class="large-8 columns">
+                        {{ form.username }}
+                    </div>
+                    <div style="color:red;">
+                        {{ form.username.errors.as_text }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        Password
+                    </div>
+                    <div class="large-8 columns">
+                        {{ form.password }}
+                    </div>
+                    <div style="color:red;">
+                        {{ form.password.errors.as_text }}
+                    </div>
+                </div>
+                <div class="row" style="color:#fe0000;text-align: center;"></div>
 
-<form method="post" action="{% url django.contrib.auth.views.login %}">
-<table>
-<tr>
-    <td>{{ form.username.label_tag }}</td>
-    <td>{{ form.username }}</td>
-</tr>
-<tr>
-    <td>{{ form.password.label_tag }}</td>
-    <td>{{ form.password }}</td>
-</tr>
-</table>
+                <div class="row" style="margin-top:10px;text-align: center;">
+                    <div class="large-12 columns">
+                        <input class="but_medium1" type="submit" value="Login" style="border:none;cursor:pointer;cursor:hand;"/><br/><br/>
+                        
+                        
 
-<input type="submit" value="login" />
-<input type="hidden" name="next" value="{{ next }}" />
-</form>
+                    </div>
+                </div>
 
+                
+                
+                
+                <input type="hidden" name="next" value="{{ next }}" />
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

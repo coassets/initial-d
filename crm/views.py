@@ -39,7 +39,7 @@ from crm import forms as crm_forms
 from crm.decorators import render_with
 
 
-@login_required
+#@login_required
 @render_with('crm/dashboard.html')
 def dashboard(request):
     if request.contact:
@@ -105,7 +105,7 @@ def dashboard(request):
     return context
 
 
-@login_required
+#@login_required
 def quick_search(request):
     if request.GET:
         form = crm_forms.QuickSearchForm(request.GET)
@@ -114,7 +114,7 @@ def quick_search(request):
     raise Http404
 
 
-@permission_required('crm.view_profile')
+#@permission_required('crm.view_profile')
 @render_with('crm/person/list.html')
 def list_people(request):
     form = crm_forms.SearchForm(request.GET)
@@ -144,7 +144,7 @@ def list_people(request):
     return context
 
 
-@login_required
+#@login_required
 @render_with('crm/person/view.html')
 def view_person(request, person_id):
     try:
@@ -194,7 +194,7 @@ def email_contact(request, contact_slug):
     }
 
 
-@login_required
+#@login_required
 @transaction.commit_on_success
 @render_with('crm/person/create_edit.html')
 def create_edit_person(request, person_id=None):
@@ -209,8 +209,8 @@ def create_edit_person(request, person_id=None):
         location = None
     new_location = not location
     
-    if profile and not profile.is_editable_by(request.user):
-        return HttpResponseRedirect(reverse('auth_login'))
+    #if profile and not profile.is_editable_by(request.user):
+     #   return HttpResponseRedirect(reverse('auth_login'))
     
     if request.POST:
         pre_save = ''
@@ -318,8 +318,8 @@ def register_person(request):
     return context
 
 
-@permission_required('crm.add_interaction')
-@permission_required('crm.change_interaction')
+#@permission_required('crm.add_interaction')
+#@permission_required('crm.change_interaction')
 @render_with('crm/interaction/create_edit.html')
 def create_edit_interaction(request, person_id=None, interaction_id=None):
     if interaction_id:
@@ -355,7 +355,7 @@ def create_edit_interaction(request, person_id=None, interaction_id=None):
     return context
 
 
-@permission_required('crm.delete_interaction')
+#@permission_required('crm.delete_interaction')
 @render_with('crm/interaction/remove.html')
 def remove_interaction(request, interaction_id):
     interaction = get_object_or_404(crm.Interaction, pk=interaction_id)
@@ -370,7 +370,7 @@ def remove_interaction(request, interaction_id):
     return context
 
 
-@permission_required('crm.view_interaction')
+#@permission_required('crm.view_interaction')
 @render_with('crm/interaction/list.html')
 def list_interactions(request):
     form = crm_forms.SearchForm(request.GET)
@@ -407,7 +407,7 @@ def list_interactions(request):
     return context
 
 
-@permission_required('crm.view_business')
+#@permission_required('crm.view_business')
 @render_with('crm/business/list.html')
 def list_businesses(request):
     form = crm_forms.SearchForm(request.GET)
@@ -434,7 +434,7 @@ def list_businesses(request):
     return context
 
 
-@permission_required('crm.view_business')
+#@permission_required('crm.view_business')
 @render_with('crm/business/view.html')
 def view_business(request, business):
     add_contact_form = crm_forms.AssociateContactForm()
@@ -466,8 +466,8 @@ def view_business(request, business):
     return context
 
 
-@permission_required('crm.add_business')
-@permission_required('crm.change_business')
+#@permission_required('crm.add_business')
+#@permission_required('crm.change_business')
 @render_with('crm/business/create_edit.html')
 def create_edit_business(request, business=None):
     location = None
@@ -517,7 +517,7 @@ def create_edit_business(request, business=None):
     return context
 
 
-@permission_required('crm.change_business')
+#@permission_required('crm.change_business')
 @transaction.commit_on_success
 @render_with('crm/business/relationship.html')
 def edit_business_relationship(request, business, user_id):
@@ -550,8 +550,8 @@ def edit_business_relationship(request, business, user_id):
     return context
 
 @csrf_exempt
-@permission_required('crm.change_business')
-@permission_required('crm.change_project')
+#@permission_required('crm.change_business')
+#@permission_required('crm.change_project')
 @transaction.commit_on_success
 def associate_contact(request, business, project=None, user_id=None, action=None):
     try:
@@ -619,7 +619,7 @@ def address_book(request, file_name):
 @transaction.commit_on_success
 @render_with('crm/login_registration/activate.html')
 def activate_login(request, activation_key):
-    if request.user.is_authenticated():
+    if not request.user.is_authenticated():
         request.notifications.add(
             "You're already logged in.  Are you sure you need to activate your account?"
         )

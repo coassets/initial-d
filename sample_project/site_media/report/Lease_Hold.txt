@@ -1,0 +1,4 @@
+<img align="center" src="aapx/report/resources/leaseHold.png" width="500" height="300">
+<sup align="center">Figure 8: reason for lease Hold  </sup>
+<br>
+<br>

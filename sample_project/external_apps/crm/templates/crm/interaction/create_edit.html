@@ -1,0 +1,81 @@
+{% extends "index.html" %}
+
+
+{% block heroslider %}
+<div class="page_title2" style="padding:150px 0px 50px 0px;">
+    <div class="container">
+
+        <h1>Interaction</h1>
+
+    </div>
+</div><!-- end page title -->
+{% endblock %}
+{% block javascript %}
+{{ form.media|safe }}
+{% endblock %}
+
+{% block main_body %}
+<style type="text/css">
+        label {
+            font-size:100%;
+            color:#263D59;
+        }
+        .errorlist * {
+            color:red;
+        }
+        ul.errorlist {
+            margin:0 !important;
+            position: relative;
+        }
+        ul.errorlist>li {
+            position:relative;
+            top:21px;
+            left:150px;
+        }
+        span.helptext {
+            font-style:italic;
+            position:relative;
+            top:-10px;
+        }
+        #id_project_description, #id_offer_highlight, #id_offer_description {
+            height:200px;
+        }
+        #id_min_annual_return, #id_max_annual_return, #id_time_horizon, #id_min_investment {
+            height:35px;
+        }
+    </style>
+	<script>
+        jQuery(function($) {
+            $("#id_project_start_date").datepicker({ dateFormat:'yy-mm-dd'});
+            $("#id_project_completion_date").datepicker({ dateFormat:'yy-mm-dd'});
+            $("#id_exit_date").datepicker({ dateFormat:'yy-mm-dd'});
+        });
+    </script>
+
+<div class="row container">
+<div class="large-12 columns">
+
+<form id='create-edit-interaction' accept-charset='UTF-8' method='post' action=''>
+    {% csrf_token %}
+    <div class="reg_form" >
+                    <div class="sky-form">
+                        <header>{% block title %}{% if interaction %}Update {{ interaction }}{% else %}Add new interaction{% if person %} for {{ person.user.get_full_name }}{% endif %}{% endif %}{% endblock %}</header>
+        </div>
+        {{ form.as_p }}
+    </div>
+	
+	<table class='vertical'>
+		
+		<tr>
+			<td>&nbsp;</td>
+			<td class='submit'>
+				<input type='button' value='Cancel' onclick='history.go(-1)' />
+				&nbsp;
+				<input type='submit' name='submit' value='{% if user %}Update{% else %}Create{% endif %} &rarr;' />
+			</td>
+		</tr>
+	</table>
+</form>
+    </div>
+</div>
+{% endblock %}

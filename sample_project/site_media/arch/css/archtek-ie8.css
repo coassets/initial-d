@@ -1,0 +1,35 @@
+.lt-ie9 .row {
+	background: #fff;
+	max-width: inherit !important;
+}
+
+.lt-ie9 .columns {
+	padding: 42px 40px;
+}
+
+.lt-ie9 .height-255 {
+	min-height: 255px;
+}
+
+.lt-ie9 .height-340 {
+	min-height: 340px;
+}
+
+.lt-ie9 .height-510 {
+	min-height: 510px;
+}
+
+.lt-ie9 .top-margin {
+	margin-top: 60px;
+}
+
+.lt-ie9 .widget-item.row {
+	background: none;
+}
+
+.lt-ie9 .section-container.vertical-tabs > section.active > .title, 
+.lt-ie9 .section-container.vertical-tabs > .section.active > .title {
+	border: 0;
+	border-top: 1px solid #1B83BE !important;
+	width: 100%;
+}

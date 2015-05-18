@@ -1,0 +1,359 @@
+{% extends "base.html" %}
+
+<!-- header meta -->
+{% block facebook_meta %}{% endblock %}
+{% block forum_meta %}{% endblock %}
+{% block module_meta %}
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=visualization,places,geometry"></script>
+{% endblock %}
+
+{% block seo_meta %}
+	<meta name="description" content="Looking for an asia crowdfunding company? CoAssets is a business networking for property investment and equity crowdfunding enthusiasts." />
+	<meta name="keywords" content= "Crowdfunding,Property Investment,Real Estate Investment,Equity Crowdfunding,Peer to Peer Lending,Asia Crowdfunding,Real Estate Investment Trust,Real Estate Funds" />
+    <link rel="canonical" href="https://www.coassets.com/" />
+{% endblock %}
+
+
+{% block metatitle %}
+    <title>CoAssets|First real estate investments platform in Singapore &amp; Southeast Asia</title>
+{% endblock %}
+
+<!--end header meta -->
+
+
+
+<!--logo-->
+{#{% block logo %}#}
+{#    <div id="logo-wrapper">#}
+{#        <div class="logo">#}
+{#            <a href="/" title="coassets">#}
+{#                <img src="{{ MEDIA_URL }}index_02.png"/>#}
+{#            </a>#}
+{#            <p>#}
+{#                Connecting Investors with Real Estate Projects#}
+{#            </p>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}
+
+<!-- header content -->
+{% block header %}
+
+
+    <header class="header">
+        <div class="container">
+            <!--Logo-->
+            <div class="logo">
+                <a href="/" title="coassets" id="logo">
+                </a>
+            </div>
+
+            <!--Navigation Menu-->
+            <nav class="menu_main">
+                <div class="navbar yamm navbar-default">
+                    <div class="container">
+
+                        <div class="navbar-header">
+                            <div class="navbar-toggle .navbar-collapse .pull-right " data-toggle="collapse" data-target="#navbar-collapse-1"  > <span>Menu</span>
+
+                                    <i class="fa fa-bars" style="float:right;"></i>
+
+                            </div>
+                        </div>
+
+
+                        <div id="navbar-collapse-1" class="navbar-collapse collapse pull-right">
+                            <ul class="nav navbar-nav">
+
+                                {% if user.is_staff %}
+                                <li class="dropdown">
+                                    <a href="/admin/" data-toggle="dropdown" class="dropdown-toggle">Admin</a>
+                                    
+                                </li>
+                                {% endif %}
+
+
+                                <li class="dropdown"><a href="{% url list_people %}" data-toggle="dropdown" class="dropdown-toggle" >People</a>
+                                    
+                                </li>
+
+
+
+                                <li class="dropdown"><a href="{% url list_businesses %}">Business</a>
+                                    
+                                </li>
+
+
+                                
+
+
+                                
+                                {% if request.user.is_authenticated %}
+                                    <li class="dropdown"><a href="{% url crm_dashboard %}" data-toggle="dropdown" class="dropdown-toggle">Dashboard</a>
+                                        <
+                                    </li>
+                                     <!--{% if request.user.profile.offer_groups.all or request.user.profile.is_offer_owner%}-->
+                                    <!--{% else %}-->
+                                        <!--<li class="dropdown">-->
+                                        <!--<a href="" data-toggle="dropdown" class="dropdown-toggle" style=" text-transform: uppercase;">-->
+                                        <!--<div class="row">-->
+                                            <!--<div class="username" style="float:left;">-->
+
+                                                  <!--{{request.user.username}}-->
+                                            <!--</div>&lt;!&ndash;end username&ndash;&gt;-->
+
+                                            <!--&lt;!&ndash;Profile Photo-&ndash;&gt;-->
+                                            <!--<div class="userimage" style="float:right;padding-left:10px!important;margin-top:-6px!important;">-->
+                                                <!--&lt;!&ndash;profile photo&ndash;&gt;-->
+                                                <!--{% if user.investor_profile.profile_picture %}-->
+                                                    <!--<div class="rounded-profile-photo" style="background-image:url('{{MEDIA_URL}}{{user.investor_profile.profile_picture}}');width:33px;height:33px;"></div>-->
+                                                    <!--&lt;!&ndash;<img id="image" src="{{MEDIA_URL}}{{invest_profile.profile_picture}}"&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;alt="" class="img-thumbnail" style="min-height:150px; min-width:180px;box-shadow: 5px 5px 2px #888888;" >&ndash;&gt;-->
+                                                <!--{% elif invest_profile.alternate_pic %}-->
+                                                    <!--<div class="rounded-profile-photo" style="background-image:url('{{user.investor_profile.alternate_pic}}');width:33px;height:33px;"></div>-->
+                                                <!--{% else %}-->
+                                                    <!--<div class="rounded-profile-photo" style="background-image:url('{{ MEDIA_URL }}portrait_ph.jpg');width:33px;height:33px;"></div>-->
+                                                <!--{% endif %}-->
+
+                                            <!--</div>&lt;!&ndash;end userimage&ndash;&gt;-->
+
+                                        <!--</div>-->
+                                    <!--</a>-->
+                                        <!--<ul class="dropdown-menu stwo multilevel" role="menu">-->
+                                        <!--<li><a href="/profile/">Profile</a></li>-->
+                                    <!--{% endif %}-->
+                                <li><a href="{% url auth_logout %}" class="LogIn">LOG OUT</a></li>
+
+                                {% else %}
+                                    <li><a href="/account/createuser/" class="register">SIGN UP</a></li>
+                                    <li><a href="{% url auth_login %}" class="LogIn">LOG IN</a></li>
+                                {% endif %}
+                            </ul><!--nav narbar-nav-->
+
+                        </div> <!---navbar-collapse-1-->
+                    </div><!--container-->
+                </div> <!--navbar yamm navbar-default-->
+            </nav>
+        </div><!--Container-->
+    </header>
+
+{% endblock %}
+
+<!--end header content -->
+
+
+
+
+<!--containercenter content-->
+{% block tagline %}
+{% endblock %}
+
+{% block heroslider %}
+{% endblock %}
+
+{% block events %}
+{% endblock %}
+
+{% block picmenu %}
+{% endblock %}
+
+{%block content%}{%endblock%}
+<!--
+{% block main_body %}
+{% endblock %}
+
+{% block script_body %}
+{% endblock %}-->
+<!-- end containercenter content -->
+
+
+<!-- footer content -->
+
+<div class="clearfix"></div>
+
+{% block footer %}
+    <style type="text/css">
+        #footer-content h4{
+            color:#aaa;
+        }
+    </style>
+<footer class="footer style2">
+    <div class="container">
+
+        <div class="row" id="fixed_logos" style="position:fixed;height:70px;bottom:0%;left:0%;z-index:999;margin:0;width:200px;">
+            <img src="{{ MEDIA_URL }}Asia_Winner_1.jpg" style="position:relative;display:inline-block;"/>
+            <img src="{{ MEDIA_URL }}opp_awards.jpg" style="position:relative;display:inline-block;"/>
+            <a href="/feeds/commentaries.rss">
+                <img src="/static/images/feed-icon-28x28.png" style="position:relative;display: inline-block;">
+            </a>
+        </div>
+
+        <div class="one_third">
+            <div id="footer-content" class="row top-margin">
+                <img src="{{ MEDIA_URL }}index_01.png" width="150" />
+                <select id="office-select" style="color:black;">
+                    <option value="SG">Singapore Office</option>
+                    <option value="MY">Malaysia Office</option>
+                    <option value="AU">Australia Office</option>
+                </select>
+                <div id='sg-office' style="color:white;">
+                    CoAssets Pte Ltd<br/>
+                    (reg #:201310357R)<br/>
+                    38C North Canal Road, <br/>
+                    Singapore 059294 <br/>
+                    Tel: +65-6532 7008
+                </div>
+                <div id='my-office' style="color:white;display:none;">
+                    CoAssets Sdn Bhd<br/>
+                    (reg #: 1058756K)<br/>
+                    Level 30, The Gardens North Tower,  <br/>
+                    Mid Valley City, Lingkaran Syed Putra, <br/>
+                    59200 Kuala Lumpur, Malaysia <br/>
+                    Tel: +60-320 359 662
+                </div>
+                <div id="au-office" style="color:white;display:none;">
+                    CoAssets Ltd<br/>
+                    (ACN 604 341 826)<br/>
+                    Office J, Level 2, <br/>
+                    1139 Hay Street West Perth WA 6005
+                </div>
+            </div>
+        </div>
+
+        <div class="one_third">
+            <!--for developers add ...-->
+            <h4>For Developers</h4>
+            <a href="mailto:admin@coassets.com">Get in touch with us to find out how you can list your projects...</a>
+
+            <br/><br/>
+            <!--for investors add ...-->
+            <h4>For Investors</h4>
+            <a href='/faq/'>Find out more about CoAssets here. </a></br></br>
+
+            <!--for media-->
+            <h4>Media Relation</h4>
+            <a class="reduceit" href="mailto:media@coassets.com">Get in touch with us here...</a><br/><br/>
+
+            <h4>Media Partner</h4>
+            <a href="http://crowdfundbeat.com/" target="_blank">CrowdFundBeat</a><br/>
+            <a href="http://www.crowdmapped.com/" target="_blank">CrowdMapped</a><br/><br/>
+
+            <div style="position:relative;bottom:4px;" class="fb-like" data-href="https://www.facebook.com/coassets"
+                 data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            <!-- Place this tag in your head or just before your close body tag. -->
+            <script src="https://apis.google.com/js/platform.js" async defer></script>
+            <!-- Place this tag where you want the +1 button to render. -->
+            <div class="g-plusone" data-annotation="bubble" data-size="medium"></div>
+            <a style="position:relative;left:4px;" href="https://twitter.com/share" class="twitter-share-button"
+               data-url="https://coassets.com" data-text="Checkout Real Estate Crowdfunding" data-via="coassets" data-related="coassets">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div><!--Column for Developers, Investors and Media Relation-->
+
+
+        <div class="one_third last">
+            <h4 >Quick Links</h4>
+            <a href="/project/">Projects</a></br>
+            <a href="/news/">News</a></br>
+            <a href="/blog/">Commentaries</a></br>
+            <a href="/terms-of-use/">Terms of Use</a></br>
+            <a href="/code-of-conduct/">Code of Conduct</a></br>
+            <a href="/privacy/">Privacy</a></br>
+            <!--<a href="/contact/referral/">Referral Program</a></br>-->
+        </div>
+
+
+
+        <script type="text/javascript">
+            jQuery("#office-select").change(function(){
+                var office = jQuery("#office-select").val();
+                console.log(office);
+                if (office == 'SG') {
+                    jQuery("#sg-office").show();
+                    jQuery("#my-office").hide();
+                    jQuery('#au-office').hide();
+                } else if (office == 'MY') {
+                    jQuery("#sg-office").hide();
+                    jQuery("#my-office").show();
+                    jQuery('#au-office').hide();
+                } else {
+                    jQuery("#sg-office").hide();
+                    jQuery("#my-office").hide();
+                    jQuery('#au-office').show();
+                }
+            });
+        </script>
+
+        <br/>
+    </div>
+</footer>
+
+    <div class="clearfix"></div>
+<br/>
+
+{##}
+{#      <div class="copyright_info two">#}
+<div class="container">
+<div class="row">
+        <ul class="footer_social_links two">
+            <li class="animate" data-anim-type="zoomIn"><a href="https://www.facebook.com/coassets"><i class="fa fa-facebook"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="https://twitter.com/coassets"><i class="fa fa-twitter"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="https://plus.google.com/111587871462112466584/posts/CzBpmxRnCAn"><i class="fa fa-google-plus"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="https://www.linkedin.com/groups/CoAssetscom-6712060"><i class="fa fa-linkedin"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="https://www.youtube.com/channel/UCEW9H6DqaI6BjVb5XZzNK9A"><i class="fa fa-youtube"></i></a></li>
+
+        </ul>
+</div>
+
+
+
+    <div class="restrictions">
+         <p class="ntext">2013 &copy; CoAssets Pte Ltd</p>
+
+            <p class="ntext">By accessing this website, you are agreeing to be bound by the restrictions set out below.</p>
+
+            <p class="ntext">This website has been prepared by CoAssets solely for information and may not be taken away,
+                reproduced or redistributed to any other person. Information contained in this website is intended solely
+                for your personal reference and is strictly confidential.</p>
+
+            <p class="ntext">The delivery of this website does not constitute an offer or invitation to purchase or
+                subscribe for any securities and no part of it shall form the basis of or be relied upon in connection
+                with any contract, commitment or investment decision in relation thereto. In addition, this website
+                may not be used for the purpose of and does not constitute an offer or invitation to purchase or subscribe
+                for any securities in any jurisdiction or under any circumstances in which such offer or invitation is
+                unlawful or unauthorised or to any person to whom it is unlawful to make such offer or invitation.</p>
+
+            <p class="ntext">This website contains forward-looking statements that involve known and unknown risks,
+                uncertainties and other factors which may cause the actual results, performance or achievements to be materially
+                different from any future results, performance or achievements expected, expressed or implied by these
+                forward-looking statements.</p>
+
+            <p class="ntext">CoAssets shall not be liable for any loss whatsoever arising from any use of the
+                information in this website.</p>
+
+            <p class="ntext">Parties should seek professional advice if in doubt to ensure compliance with all applicable
+                laws and regulations, which could vary depending on the specific features of the project undertaken.</p>
+
+
+</div>
+
+<br/>
+
+</div>
+{#</div><!-- end copyright info -->#}
+
+
+
+
+{% endblock %}
+
+<div class="clearfix"></div>
+
+{% block footer2 %}
+    <div id="footer-bar-inner-wrapper" class="content-width">
+        <div class="large-12 columns less-padding">
+
+        </div>
+    </div>
+
+{% endblock %}
+</div>

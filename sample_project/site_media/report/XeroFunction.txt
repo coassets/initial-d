@@ -1,0 +1,27 @@
+1)Required packages
+	-Download:
+		m2crypto download : http://chandlerproject.org/Projects/MeTooCrypto#Downloads
+	-Easy install using pip:
+		XeroAPI
+		httplib2
+		oauth2
+	-Version:
+		M2Crypto==0.21.1
+		XeroAPI==0.0.6
+		httplib2==0.8
+		oauth2==1.5.221
+
+2)Importing and using the function:
+	Core function name : send_invoice_to_Xero(payee, amount, price, description, duedate)
+	Example code:
+
+	from aapx.payment.XeroApi import send_invoice_to_Xero
+
+	response = send_invoice_to_Xero(self.customer1, 	#User entity
+ 	                                5.00, 			#Quantity
+  	                                100.00, 		#Unit price
+    	                                "test invoice", 	#Description for Invoice
+    	                                "2013-08-08")		#Duedate must be in the exact format yyyy-mm-dd
+
+	#response return a dictionary, we can check status at: response['Response']['Status']
+ 

@@ -1,0 +1,28 @@
+/*
+ * Archtek - Responsive Modern HTML Template
+ * By UXbarn
+ * Themeforest Profile: http://themeforest.net/user/UXbarn?ref=UXbarn
+ * Demo URL: http://themes.uxbarn.com/redirect.php?theme=homec_html
+ * Created: May 19, 2013
+ */
+
+/* #Main Styles
+ ================================================== */
+@import url('archtek.css');
+
+/* #Color Schemes
+ * ==================================================
+ * You can select one of these available colors:
+ * 1. green.css
+ * 2. red.css
+ * 3. orange.css
+ * 4. yellow.css
+ * 5. purple.css
+ * 
+ * Remove or comment out the following line to use default blue color
+ */ 
+@import url('colors/red.css');
+
+
+
+

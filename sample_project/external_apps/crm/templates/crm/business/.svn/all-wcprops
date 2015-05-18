@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/110/trunk/crm/templates/crm/business
+END
+create_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/110/trunk/crm/templates/crm/business/create_edit.html
+END
+view.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/95/trunk/crm/templates/crm/business/view.html
+END
+list.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/62/trunk/crm/templates/crm/business/list.html
+END
+relationship.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/110/trunk/crm/templates/crm/business/relationship.html
+END

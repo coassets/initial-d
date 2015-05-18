@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/78/trunk/crm/migrations
+END
+006_slug_not_null.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/21/trunk/crm/migrations/006_slug_not_null.sql
+END
+009_relationship_dates.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/69/trunk/crm/migrations/009_relationship_dates.sql
+END
+001_locations.sql
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/10/trunk/crm/migrations/001_locations.sql
+END
+002_business.sql
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/56/trunk/crm/migrations/002_business.sql
+END
+004_business.sql
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/18/trunk/crm/migrations/004_business.sql
+END
+005_slug.sql
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/21/trunk/crm/migrations/005_slug.sql
+END
+003_business_relationships.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/56/trunk/crm/migrations/003_business_relationships.sql
+END
+007_contact.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/61/trunk/crm/migrations/007_contact.sql
+END
+010_remove_project.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/76/trunk/crm/migrations/010_remove_project.sql
+END
+011_project_relationship.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/78/trunk/crm/migrations/011_project_relationship.sql
+END
+008_contact_fields.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/61/trunk/crm/migrations/008_contact_fields.sql
+END

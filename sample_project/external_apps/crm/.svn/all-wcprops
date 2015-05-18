@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/112/trunk/crm
+END
+widgets.py
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/69/trunk/crm/widgets.py
+END
+context_processors.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/69/trunk/crm/context_processors.py
+END
+middleware.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/74/trunk/crm/middleware.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/109/trunk/crm/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/74/trunk/crm/urls.py
+END
+forms.py
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/92/trunk/crm/forms.py
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/107/trunk/crm/admin.py
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/2/trunk/crm/LICENSE
+END
+lookups.py
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/74/trunk/crm/lookups.py
+END
+managers.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/65/trunk/crm/managers.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/110/trunk/crm/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/crm/__init__.py
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/100/trunk/crm/tests.py
+END
+xmlrpc.py
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/112/trunk/crm/xmlrpc.py
+END
+decorators.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/65/trunk/crm/decorators.py
+END

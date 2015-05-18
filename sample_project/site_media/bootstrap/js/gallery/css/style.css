@@ -1,0 +1,24 @@
+ul.portfolio.group,.filter.group { list-style: none; }
+.filter.group a.current{color:#f54305;}
+.filtergroup{text-align:center}
+/* Custom Classes
+------------------------------------------------------------ */
+.group:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+* html .group { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
+
+/* Filter */
+dl { margin-bottom: 3em; color: #777; }
+dt, dd { float: left; }
+dt { margin-right: 5px; }
+.filter li { float: left; }
+.filter li:after { content: "/"; }
+.filter li:last-child:after { content: ""; }
+.filter a { padding: 0 10px; color: #777; text-decoration: none; }
+.filter a:hover, .current a { color: #4f0d4d; }
+
+/* Portfolio Items */
+.portfolio li { float: left; margin-right: 18px; margin-bottom: 2em; border: 1px solid #ccc; -moz-box-shadow: 0 5px 5px -3px #222; -webkit-box-shadow: 0 5px 5px -3px #222; box-shadow: 0 5px 5px -3px #222; }
+
+.portfolio a { display: block; border: 3px solid #fff;  text-decoration: none; }
+.portfolio img { width: 210px; height: 130px; display: block; border: 1px solid #ccc; }

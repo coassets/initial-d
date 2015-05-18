@@ -1,0 +1,5 @@
+<img align="center" src="aapx/report/resources/ownStay.png" width="500" height="300">
+<sup align="center">Figure 5: Own Stay reason </sup>
+<br>
+<br>
+<br>

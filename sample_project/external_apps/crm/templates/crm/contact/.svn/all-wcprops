@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/30/trunk/crm/templates/crm/contact
+END
+email.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/30/trunk/crm/templates/crm/contact/email.html
+END
+contact_form.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/30/trunk/crm/templates/crm/contact/contact_form.txt
+END
+contact_form_confirmation.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/30/trunk/crm/templates/crm/contact/contact_form_confirmation.txt
+END

@@ -1,0 +1,123 @@
+a, a:visited {
+	color: #B21C58;
+}
+
+.bottom-line {
+	border-bottom: 2px solid #B21C58;
+}
+
+#content-container blockquote {
+    border-left: 3px solid #B21C58;
+}
+
+#root-menu li ul li a:hover, 
+#root-menu li ul li:hover > a {
+	color: #B21C58;	
+}
+
+.top-bar-section a:hover {
+	color: #B21C58 !important; 
+}
+
+#header-search-button {
+	background: #B21C58;
+}
+
+.has-line {
+	border-bottom: 1px solid #B21C58;
+}
+
+#intro-line hr.stick {
+	border-top: 7px solid #B21C58;
+}
+
+.portfolio-item-hover {
+	background: rgb(209,98,142);
+	background: rgba(209,98,142,0.8);
+	color: #fff;
+}
+
+#portfolio-item-meta a {
+	color: #B21C58;
+}
+
+.style2 .testimonial-bullets a.selected {
+	background: #B21C58;
+}
+
+.gallery-item:hover {
+	border-color: #B21C58;
+}
+
+.blog-item {
+	border-bottom: 6px solid #B21C58;
+}
+
+.blog-item.single {
+	border-top: 6px solid #B21C58;
+}
+
+.tags a:hover {
+	background: #B21C58;
+}
+
+.member-name a:hover {
+	color: #B21C58 !important;
+}
+
+.ui-accordion-header.ui-state-active {
+	border-left: 2px solid #B21C58;
+}
+
+.section-container.tabs > section.active > .title, 
+.section-container.tabs > .section.active > .title,
+.section-container.auto > section.active > .title,
+.section-container.auto > .section.active > .title,
+.section-container.vertical-tabs > section.active > .title, 
+.section-container.vertical-tabs > .section.active > .title {
+	border-top: 1px solid #B21C58;
+}
+
+.section-container.vertical-tabs > section.active > .title, 
+.section-container.vertical-tabs > .section.active > .title {
+	border-left: 1px solid #B21C58;
+}
+
+#scrollUp:hover {
+	background: #B21C58;
+}
+
+.button {
+	background: #B21C58;
+}
+
+.pagination li.current a {
+	background: #B21C58;
+}
+
+.pagination li.current a:hover {
+	background: #B21C58;
+}
+
+
+
+.button:hover {
+	background: #932150;
+}
+
+#header-search-button:hover {
+	background: #932150;
+}
+
+.blog-item .blog-title a:hover,
+.sub-blog-item .sub-blog-title a:hover {
+	color: #932150 !important;
+}
+
+
+@media only screen and (max-width: 767px) {
+	.section-container.vertical-tabs > section.active > .title, 
+	.section-container.vertical-tabs > .section.active > .title {
+		border-top: 1px solid #B21C58 !important;
+	}
+}

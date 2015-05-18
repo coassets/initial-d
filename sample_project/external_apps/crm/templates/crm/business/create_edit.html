@@ -1,0 +1,96 @@
+{% extends "crm/business/view.html" %}
+{% load i18n %}
+
+{% block title %}{% if not business %}Create {% trans "Business" %}{% else %}Edit {{ business }}{% endif %}{% endblock %}
+
+{% block breadcrumb %}
+    {{ block.super }}
+    {% load breadcrumb_tags %}
+    {% if business %}
+        {% add_crumb 'Edit' %}
+    {% else %}
+        {% add_crumb 'Create' %}
+    {% endif %}
+{% endblock %}
+
+{% block javascript %}
+{{ location_form.media }}
+{% endblock %}
+
+{% block mootools %}
+    <script src="{{ MEDIA_URL }}js/mootools-1.2.1-core-yc.js" type="text/javascript"></script>
+    <link href="/clients/media/style/caktus/Autocompleter/Autocompleter.css" type="text/css" media="all" rel="stylesheet" />
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/caktus/Autocompleter/Autocompleter.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/caktus/Autocompleter/Autocompleter.Request.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/caktus/Autocompleter/Observer.js"></script>
+{% endblock %}
+
+{% block css %}
+<link charset='UTF-8' rel='stylesheet' type='text/css' media='screen' href='{{ MEDIA_URL }}css/django-contactinfo.css' />
+{% endblock %}
+
+{% block main_body %}
+<style type="text/css">
+        label {
+            font-size:100%;
+            color:#263D59;
+        }
+        .errorlist * {
+            color:red;
+        }
+        ul.errorlist {
+            margin:0 !important;
+            position: relative;
+        }
+        ul.errorlist>li {
+            position:relative;
+            top:21px;
+            left:150px;
+        }
+        span.helptext {
+            font-style:italic;
+            position:relative;
+            top:-10px;
+        }
+        #id_project_description, #id_offer_highlight, #id_offer_description {
+            height:200px;
+        }
+        #id_min_annual_return, #id_max_annual_return, #id_time_horizon, #id_min_investment {
+            height:35px;
+        }
+    </style>
+	<script>
+        jQuery(function($) {
+            $("#id_project_start_date").datepicker({ dateFormat:'yy-mm-dd'});
+            $("#id_project_completion_date").datepicker({ dateFormat:'yy-mm-dd'});
+            $("#id_exit_date").datepicker({ dateFormat:'yy-mm-dd'});
+        });
+    </script>
+
+
+<div class="row container">
+<div class="large-12 columns">
+<form id="create-edit-business" action="" method="post" accept-charset="utf-8">
+    {% csrf_token %}
+    <div class="reg_form" >
+                    <div class="sky-form">
+                        <header>{% if not business %}Create {% trans "Business" %}{% else %}Edit {{ business }}{% endif %}</header>
+        </div>
+        {{ business_form.as_p }}
+    </div>
+	<table class='vertical'>
+		
+        {% include 'contactinfo/_create_edit_location.html' %}
+		<tr>
+			<td>&nbsp;</td>
+			<td class='submit'>
+				<input type='button' value='Cancel' onclick='history.go(-1)' />
+				&nbsp;
+				<input type='submit' name='submit' value='Save &rarr;' />
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+</div>
+{% endblock %}

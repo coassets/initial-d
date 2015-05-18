@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/95/trunk/crm/templates/crm/interaction
+END
+create_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/71/trunk/crm/templates/crm/interaction/create_edit.html
+END
+_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/95/trunk/crm/templates/crm/interaction/_list.html
+END
+list.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/crm/templates/crm/interaction/list.html
+END
+remove.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/crm/templates/crm/interaction/remove.html
+END

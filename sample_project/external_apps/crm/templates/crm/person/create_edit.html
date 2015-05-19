@@ -68,8 +68,7 @@
                 {% for form in forms %} 
                     {{ form.as_p }} 
                 {% endfor %}
-            </div>
-            <table class='vertical'>
+                <table class='vertical'>
                 {% for form in forms %} {{ form }} {% endfor %} {% include 'contactinfo/_create_edit_location.html' %}
                 <tr>
                     <td>&nbsp;</td>
@@ -79,6 +78,8 @@
                     </td>
                 </tr>
             </table>
+            </div>
+            
         </form>
     </div>
 </div>

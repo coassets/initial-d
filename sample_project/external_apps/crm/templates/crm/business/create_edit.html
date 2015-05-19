@@ -77,8 +77,7 @@
                         <header>{% if not business %}Create {% trans "Business" %}{% else %}Edit {{ business }}{% endif %}</header>
         </div>
         {{ business_form.as_p }}
-    </div>
-	<table class='vertical'>
+        <table class='vertical'>
 		
         {% include 'contactinfo/_create_edit_location.html' %}
 		<tr>
@@ -90,6 +89,8 @@
 			</td>
 		</tr>
 	</table>
+    </div>
+	
 </form>
 </div>
 </div>

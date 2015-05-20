@@ -62,9 +62,7 @@
                         <header>{% block title %}{% if interaction %}Update {{ interaction }}{% else %}Add new interaction{% if person %} for {{ person.user.get_full_name }}{% endif %}{% endif %}{% endblock %}</header>
         </div>
         {{ form.as_p }}
-    </div>
-	
-	<table class='vertical'>
+        <table class='vertical'>
 		
 		<tr>
 			<td>&nbsp;</td>
@@ -75,6 +73,9 @@
 			</td>
 		</tr>
 	</table>
+    </div>
+	
+	
 </form>
     </div>
 </div>

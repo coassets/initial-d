@@ -45,6 +45,34 @@
 	</p>
 {% else %}
 {#{% paginate %}#}
+
+<table>
+  <thead>
+    <tr>
+      <th width="200">Name</th>
+      <th width="200">Address</th>
+      <th width="200">Notes</th>
+      
+    </tr>
+  </thead>
+  {% for business in businesses %}
+  <tbody>
+	  
+    <tr>
+      <td><a href='{% url view_business business_id=business.id %}'>{{ business.name }}</a></td>
+      <td>{% for location in business.locations.all %}
+            {% for address in location.addresses.all %}
+                {{ address }} <br/>
+            {% endfor %}
+            {% endfor %}</td>
+      <td>{{ business.notes }}</td>
+      
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>
+
 <table class='businesses'>
 	<tr>
 		<th>Name</th>

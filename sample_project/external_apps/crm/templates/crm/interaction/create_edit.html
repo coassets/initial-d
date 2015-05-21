@@ -1,5 +1,9 @@
 {% extends "index.html" %}
 
+{% block javascript %}
+{{ form.media|safe }}
+{% endblock %}
+
 
 {% block heroslider %}
 <div class="page_title2" style="padding:150px 0px 50px 0px;">
@@ -9,9 +13,6 @@
 
     </div>
 </div><!-- end page title -->
-{% endblock %}
-{% block javascript %}
-{{ form.media|safe }}
 {% endblock %}
 
 {% block main_body %}

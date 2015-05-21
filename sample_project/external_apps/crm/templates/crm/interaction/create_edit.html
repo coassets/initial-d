@@ -53,31 +53,27 @@
         });
     </script>
 
-<div class="row container">
-<div class="large-12 columns">
-
-<form id='create-edit-interaction' accept-charset='UTF-8' method='post' action=''>
-    {% csrf_token %}
-    <div class="reg_form" >
-                    <div class="sky-form">
-                        <header>{% block title %}{% if interaction %}Update {{ interaction }}{% else %}Add new interaction{% if person %} for {{ person.user.get_full_name }}{% endif %}{% endif %}{% endblock %}</header>
-        </div>
-        {{ form.as_p }}
-        <table class='vertical'>
-		
-		<tr>
-			<td>&nbsp;</td>
-			<td class='submit'>
-				<input type='button' value='Cancel' onclick='history.go(-1)' />
+<div class="row container" style="margin-bottom: 40px;">
+	<div class="large-12 columns">
+		<form id='create-edit-interaction' accept-charset='UTF-8' method='post' action=''>
+			{% csrf_token %}
+			<div class="reg_form" >
+				<div class="sky-form">
+					<header>{% block title %}{% if interaction %}Update {{ interaction }}{% else %}Add new interaction{% if person %} for {{ person.user.get_full_name }}{% endif %}{% endif %}{% endblock %}</header>
+				</div>
+				{{ form.as_p }}
+				<table class='vertical'>
+					<tr>
+						<td>&nbsp;</td>
+						<td class='submit'>
+							<input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type='button' value='Cancel' onclick='history.go(-1)' />
 				&nbsp;
-				<input type='submit' name='submit' value='{% if user %}Update{% else %}Create{% endif %} &rarr;' />
-			</td>
-		</tr>
-	</table>
-    </div>
-	
-	
-</form>
+							<input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type="submit" name="submit" value='{% if user %}Update{% else %}Create{% endif %} &rarr;'/>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
     </div>
 </div>
 {% endblock %}

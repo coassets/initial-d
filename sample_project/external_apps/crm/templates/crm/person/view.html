@@ -20,6 +20,9 @@
 </ul>
 
 <table class='vertical' id='person-profile'>
+	{% if contact.picture %}
+	<img src="{{contact.picture.url}}" style="width:100px;">
+	{% endif %}
 {% if contact.email %}
     <tr>
         <th>Email:</th>
@@ -59,7 +62,7 @@
         </ul>
     {% endifnotequal %}
 {% endif %}
-
+<br><br>
 {% if perms.crm.view_interaction %}
     <h3>Recent Interactions</h3>
     <ul class='header-actions-left'>

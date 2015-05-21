@@ -66,7 +66,8 @@ urlpatterns = patterns('',
     
     # projects
     url(
-        r'^business/(?P<business_id>\d+)/(?:project/(?P<project_id>\d+)/)?(?:contact/(?P<user_id>\w+)/)?(?P<action>remove|add)/$',
+        #r'^business/(?P<business_id>\d+)/(?:project/(?P<project_id>\d+)/)?(?:contact/(?P<user_id>\w+)/)?(?P<action>remove|add)/$',
+        r'^business/(?P<business_id>\d+)/?(?:contact/(?P<user_id>\w+)/)?(?P<action>remove|add)/$',
         views.associate_contact,
         name='associate_contact',
     ),

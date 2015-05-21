@@ -39,28 +39,35 @@
 {% autopaginate people %}
 
 {% paginate %}
-<table class='people'>
-	<tr>
-		<th>Name</th>
-		<th>E-mail</th>
-		<th>Phone Number(s)</th>
-		<th>Notes</th>
-	</tr>
-	{% for person in people %}
-	<tr>
-		<td class='name'><a href='{% url view_person person_id=person.id %}'>{{ person.get_full_name }}</a></td>
-		<td><a href='mailto:{{ person.email }}'>{{ person.email }}</a></td>
-		<td class='phone'>
-    {% for location in person.locations.all %}
-        {% for phone in location.phones.all %}
-			<a href='sip://1-{{ phone }}'>{{ phone }}</a> ({{ phone.type }})<br />
-		{% endfor %}
-    {% endfor %}
-		</td>
-		<td>{{ person.notes }}</td>
-	</tr>
-	{% endfor %}
-</table>
+<div class="table-responsive">
+		<table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Name</th>
+					<th>E-mail</th>
+					<th>Phone Number(s)</th>
+					<th>Notes</th>
+                </tr>
+                </thead>
+                <tbody>
+					{% for person in people %}
+				<tr>
+					<td class='name'><a href='{% url view_person person_id=person.id %}'>{{ person.get_full_name }}</a></td>
+					<td><a href='mailto:{{ person.email }}'>{{ person.email }}</a></td>
+					<td class='phone'>
+						{% for location in person.locations.all %}
+							{% for phone in location.phones.all %}
+							<a href='sip://1-{{ phone }}'>{{ phone }}</a> ({{ phone.type }})<br />
+							{% endfor %}
+						{% endfor %}
+					</td>
+					<td>{{ person.notes }}</td>
+				</tr>
+					{% endfor %}
+                </tbody>
+            </table>
+    
+	</div>
 {% paginate %}
 
 {% endblock %}

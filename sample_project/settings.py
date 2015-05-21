@@ -99,6 +99,7 @@ MIDDLEWARE_CLASSES = (
     'django_notify.middleware.NotificationsMiddleware',
     'crm.middleware.StandardViewKwargsMiddleware',
     'pagination.middleware.PaginationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
 )
 
 ROOT_URLCONF = 'sample_project.urls'
@@ -118,6 +119,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.humanize',
     'django.contrib.markup',
+    'django.contrib.staticfiles',
     'contactinfo',
     'countries',
     'crm',
@@ -125,6 +127,7 @@ INSTALLED_APPS = (
     'django_notify',
     'pagination',
     'django.contrib.admindocs' ,
+    'ajax_select',
 )
 
 AJAX_LOOKUP_CHANNELS = {
@@ -136,3 +139,7 @@ AJAX_LOOKUP_CHANNELS = {
 STATICFILES_DIRS = (
     '%s/site_media' % PROJECT_PATH,
 )
+
+
+
+STATIC_URL = '/static/'

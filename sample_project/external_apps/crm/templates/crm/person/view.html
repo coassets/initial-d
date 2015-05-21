@@ -23,7 +23,7 @@
 {% if contact.email %}
     <tr>
         <th>Email:</th>
-        <td><a href='mailto:{{ contact.email }}'>{{ contact.email }}</a> (<a href='{% url email_contact contact.slug %}'>Send Email)</a></td>
+        <td><a href='mailto:{{ contact.email }}'>{{ contact.email }}</a> (<a href='{% url email_contact contact.slug %}'>Send Email</a>)</td>
     </tr>
 {% endif %}
 {% for location in contact.locations.all %}
@@ -64,7 +64,7 @@
     <h3>Recent Interactions</h3>
     <ul class='header-actions-left'>
     {% if perms.crm.add_interaction %}
-    	<li><a href='{#{% url create_interaction person_id=contact.id %}?next={{ request.path }}#}'>New Interaction</a></li>
+    	<li><a href='{% url create_interaction person_id=contact.id %}?next={{ request.path }}'>New Interaction</a></li>
     {% endif %}
     </ul>
     {% include 'crm/interaction/_list.html' %}

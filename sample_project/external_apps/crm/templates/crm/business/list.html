@@ -45,27 +45,36 @@
 	</p>
 {% else %}
 {#{% paginate %}#}
-<table class='businesses'>
-	<tr>
-		<th>Name</th>
-		<th>Address</th>
-		<th>Notes</th>
-	</tr>
-	{% for business in businesses %}
-	<tr>
-		<td><a href='{% url view_business business_id=business.id %}'>{{ business.name }}</a></td>
-		<td>
-            {% for location in business.locations.all %}
-            {% for address in location.addresses.all %}
-                {{ address }} <br/>
-            {% endfor %}
-            {% endfor %}
-        </td>
-		<td>{{ business.notes }}</td>
-	</tr>
-	{% endfor %}
-</table>
-{#{% paginate %}#}
+
+
+	<div class="table-responsive">
+		<table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Name</th>
+					<th>Address</th>
+					<th>Notes</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+					{% for business in businesses %}
+                    <td><a href='{% url view_business business_id=business.id %}'>{{ business.name }}</a></td>
+					<td>
+						{% for location in business.locations.all %}
+						{% for address in location.addresses.all %}
+						{{ address }} <br/>
+						{% endfor %}
+						{% endfor %}
+					</td>
+					<td>{{ business.notes }}</td>
+				</tr>
+					{% endfor %}
+                </tbody>
+            </table>
+    
+	</div>
+	{#{% paginate %}#}
 {% endifequal %}
 
 {% endblock %}

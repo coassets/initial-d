@@ -21,6 +21,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     #url(r'^admin/(.*)', admin.site.root),
+    url(r'^admin/', include(admin.site.urls)),
     
     # use the contrib.auth login/logout views for authentication (optional)
     url(

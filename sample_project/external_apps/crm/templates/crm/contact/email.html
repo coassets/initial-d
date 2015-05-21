@@ -8,15 +8,23 @@
 
 {% block title %}Send Email to {{ contact }}{% endblock %}
 
-{% block content %}
-    <h1>Send Email to {{ contact }}</h1>
+{% block main_body %}
+<div class="reg_form" >
+ <div class="sky-form">
+	 <div class="sky-form">
+		 <header>Send Email to {{ contact }}</header>
+     </div>
+    
     <form action='' method='post'>
         <table id='contact-form' class='vertical top'>
-            {{ form }}
+            {{ form.as_p }}
             <tr>
                 <td>&nbsp;</td>
-                <td class='submit'><input type='submit' name='submit' class='button' value='Send!' /></td>
+                <br/><br/>
+                <td class='submit'><input class="but_medium1" type="submit" name='submit' value="Send" style="border:none;cursor:pointer;cursor:hand;"/></td>
             </tr>
         </table>
     </form>
+ </div>
+</div>
 {% endblock %}

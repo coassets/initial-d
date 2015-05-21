@@ -26,12 +26,12 @@
 			</ul>
 		</td>
 		<td class='memo'>
-			{{ interaction.memo|markdown }}
+			{{ interaction.memo}}
 			<p class="small">{{ interaction.contacts_images }}</p>
-			{% if interaction.duration %}
+			{#{% if interaction.duration %}#}
 				<br />
-				{{ interaction.duration }}
-			{% endif %}
+				{#{{ interaction.duration }}#}
+			{#{% endif %}#}
 		</td>
 	</tr>
 {% endfor %}

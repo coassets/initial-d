@@ -55,7 +55,7 @@
 </script>
 
 
-<div class="row container">
+<div class="row container" style="margin-bottom: 40px;">
     <div class="large-12 columns">
 
         <form id='create-edit-person' accept-charset='UTF-8' method='post' action=''>
@@ -73,8 +73,8 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td class='submit'>
-                        <input type='button' value='Cancel' onclick='history.go(-1)' /> &nbsp;
-                        <input type='submit' name='submit' value='{% if contact %}Update{% else %}Create{% endif %} &rarr;' />
+                        <input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type='button' value='Cancel' onclick='history.go(-1)' /> &nbsp;
+                        <input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type='submit' name='submit' value='{% if contact %}Update{% else %}Create{% endif %} &rarr;' />
                     </td>
                 </tr>
             </table>

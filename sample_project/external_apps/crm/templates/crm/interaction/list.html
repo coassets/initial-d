@@ -22,8 +22,17 @@
 
 {% load navigation %}
 {% block navigation %}{% menu caktus_books interactions %}{% endblock %}
+{% block heroslider %}
+<div class="page_title2" style="padding:150px 0px 50px 0px;">
+    <div class="container">
 
-{% block content %}
+        <h1>Interaction</h1>
+
+    </div>
+</div><!-- end page title -->
+{% endblock %}
+
+{% block main_body %}
 	<h2>Interactions</h2>
 	<p>To create a new interaction, navigate to the contact record you've interacted with and click "New Interaction."</p>
 	
@@ -31,7 +40,7 @@
 		<ul>
 			{{ form.as_ul }}
 			<li class='form-buttons'>
-				<input class='large-button' type='submit' name='submit' value='Search &rarr;' />
+				<input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type='submit' name='submit' value='Search &rarr;' />
 			</li>
 		</ul>
 	</form>

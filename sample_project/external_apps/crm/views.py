@@ -31,6 +31,7 @@ from django.contrib.auth import authenticate, login
 from django.core.mail import send_mass_mail, send_mail
 from django.views.decorators.csrf import csrf_exempt
 
+
 from contactinfo.helpers import create_edit_location
 from contactinfo import models as contactinfo
 
@@ -378,7 +379,7 @@ def list_interactions(request):
         search = form.cleaned_data['search']
         interactions = crm.Interaction.objects.filter(
             Q(type__icontains=search) |
-            Q(project__name__icontains=search) |
+            #Q(project__name__icontains=search) |
             Q(contacts__first_name__icontains=search) |
             Q(contacts__last_name__icontains=search) |
             Q(memo__icontains=search)

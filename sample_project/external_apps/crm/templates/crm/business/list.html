@@ -1,6 +1,13 @@
 {% extends "index.html" %}
 {% load i18n %}
 
+
+{% block breadcrumb %}
+    {{ block.super }}
+    {% load breadcrumb_tags %}
+    {% add_crumb 'Businesses' 'list_businesses' %}
+{% endblock %}
+
 {% block heroslider %}
 <div class="page_title2" style="padding:150px 0px 50px 0px;">
     <div class="container">
@@ -9,12 +16,6 @@
 
     </div>
 </div><!-- end page title -->
-{% endblock %}
-
-{% block breadcrumb %}
-    {{ block.super }}
-    {% load breadcrumb_tags %}
-    {% add_crumb 'Businesses' 'list_businesses' %}
 {% endblock %}
 
 {% block main_body %}

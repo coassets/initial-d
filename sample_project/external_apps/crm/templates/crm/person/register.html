@@ -1,26 +1,44 @@
 {% extends "index.html" %}
 
-{% block title %}New Account Registration{% endblock %}
 
-{% block content %}
+{% block heroslider %}
+<div class="page_title2" style="padding:150px 0px 50px 0px;">
+    <div class="container">
 
-<h2>New Account Registration</h2>
+        <h1>Registration</h1>
 
-<p>To register for a new account, fill out the form below and click Go.  Your password will be emailed to you (and we won't use your email for any other purpose).</p>
+    </div>
+</div><!-- end page title -->
+{% endblock %}
 
-<form id='register-person' accept-charset='UTF-8' method='post' action=''>
-    {% csrf_token %}
-	<table class='vertical'>
-		{{ form }}
-		<tr>
-			<td>&nbsp;</td>
-			<td class='submit'>
-				<input type='button' value='Cancel' onclick='history.go(-1)' />
-				&nbsp;
-				<input type='submit' name='submit' value='Go &rarr;' />
-			</td>
-		</tr>
-	</table>
-</form>
+{% block main_body %}
 
+
+<div class="row container" style="margin-bottom: 40px;">
+	<div class="large-12 columns">
+		<form id='register-person' accept-charset='UTF-8' method='post' action=''>
+			{% csrf_token %}
+			<div class="reg_form" >
+				<div class="sky-form">
+					<header>
+						<h2>New Account Registration</h2>
+						<p>To register for a new account, fill out the form below and click Go.  Your password will be emailed to you (and we won't use your email for any other purpose).</p>
+					</header>
+				</div>
+			
+				<table class='vertical'>
+					{{ form }}
+					<tr>
+						<td>&nbsp;</td>
+						<td class='submit'>
+							<input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type='button' value='Cancel' onclick='history.go(-1)' />
+							&nbsp;
+							<input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type='submit' name='submit' value='Go &rarr;' />
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+</div>
 {% endblock %}

@@ -9,22 +9,27 @@
 {% block title %}Send Email to {{ contact }}{% endblock %}
 
 {% block main_body %}
-<div class="reg_form" >
- <div class="sky-form">
-	 <div class="sky-form">
-		 <header>Send Email to {{ contact }}</header>
-     </div>
-    
-    <form action='' method='post'>
-        <table id='contact-form' class='vertical top'>
-            {{ form.as_p }}
-            <tr>
-                <td>&nbsp;</td>
-                <br/><br/>
-                <td class='submit'><input class="but_medium1" type="submit" name='submit' value="Send" style="border:none;cursor:pointer;cursor:hand;"/></td>
-            </tr>
-        </table>
-    </form>
- </div>
+	 
+<div class="row container" style="margin-bottom: 40px;">
+	<div class="large-12 columns">
+		<form action='' method='post'>
+			<div class="reg_form" >
+				<div class="sky-form">
+					<header>Send Email to {{ contact }}</header>
+				</div>
+				<table id='contact-form' class='vertical top'>
+					{{ form.as_p }}
+					<tr>
+						<td>&nbsp;</td>
+						<br/><br/>
+						<td class='submit'>
+							<input class="but_small1" type="submit" name='submit' value="Send" style="border:none;cursor:pointer;cursor:hand;"/>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+ 	</div>
 </div>
+
 {% endblock %}

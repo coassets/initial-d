@@ -42,7 +42,7 @@
 		</div>
 	</form>
 </div>
-
+<br style="clear: both;">
 <table class='vertical' id='business-profile'>
     {% for location in business.locations.all %}
         {% for address in location.addresses.all %}
@@ -71,5 +71,5 @@
         </tr>
     {% endif %}
 </table>
-
+<br style="clear: both;">
 {% endblock %}

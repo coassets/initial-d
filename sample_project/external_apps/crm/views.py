@@ -182,6 +182,13 @@ def email_contact(request, contact_slug):
         )
         if form.is_valid():
             form.save()
+            subject= 'Test'
+            #
+            #message= form.cleaned_data['message']
+            #email_from= settings.EMAIL_HOST_USER
+            #email_to=form.cleaned_data['email']
+            #send_mail(subject, message, email_from, [email_to], fail_silently=False)
+            #
             request.notifications.add(
                 'Message sent successfully to %s.' % contact
             )
@@ -219,14 +226,17 @@ def create_edit_person(request, person_id=None):
             pre_save = profile.as_text_block()
         profile_form = crm_forms.ProfileForm(
             request.POST,
+            request.FILES,
             instance=profile,
             request=request,
         )
+        
         location, location_saved, location_context = create_edit_location(
             request, 
             location,
             profile_form.is_valid(),
         )
+        
         
         if location_saved:
             # no e-mail will be sent if dict is empty or None
@@ -235,6 +245,7 @@ def create_edit_person(request, person_id=None):
 #                'subject': 'Welcome!',
 #                'extra_context': { 'somekey': 'someval' },
             }
+            profile_form.picture=request.FILES['picture']
             saved_profile = profile_form.save()
             
             if new_location:

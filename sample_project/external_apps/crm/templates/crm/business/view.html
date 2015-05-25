@@ -29,8 +29,8 @@
 	{% for contact in business.individual_relations.select_related %}
 		<li>
 			<a href='{% url view_person person_id=contact.id %}'>{{ contact.get_full_name }}</a>
-			<a title="Edit {{ contact.get_full_name }}'s relationship to {{ business }}" href='{% url edit_business_relationship business_id=business.id,user_id=contact.id %}?next={% url view_business business_id=business.id %}'><img alt="Edit {{ contact.get_full_name }}'s relationship to {{ business }}" src='{{ FAMFAMFAM_URL }}pencil.png' /></a>
-            <a title='Remove {{ contact.get_full_name }}' href='{% url associate_contact business_id=business.id,user_id=contact.id,action="remove" %}?next={% url view_business business_id=business.id %}'><img alt='Remove {{ contact.get_full_name }}' src='{{ FAMFAMFAM_URL }}delete.png' /></a>
+			<a title="Edit {{ contact.get_full_name }}'s relationship to {{ business }}" href='{% url edit_business_relationship business_id=business.id,user_id=contact.id %}?next={% url view_business business_id=business.id %}'><img alt="Edit {{ contact.get_full_name }}'s relationship to {{ business }}" src='{{ MEDIA_URL }}images/pencil.png' style="height:20px;" /></a>
+            <a title='Remove {{ contact.get_full_name }}' href='{% url associate_contact business_id=business.id,user_id=contact.id,action="remove" %}?next={% url view_business business_id=business.id %}'><img alt='Remove {{ contact.get_full_name }}' src='{{ MEDIA_URL }}images/delete.png' style="height:20px;" /></a>
 		</li>
 	{% endfor %}
 	{% endifnotequal %}

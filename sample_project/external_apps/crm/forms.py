@@ -319,8 +319,8 @@ class ContactRelationshipForm(forms.ModelForm):
 
 
 class EmailContactForm(forms.Form):
-    name = forms.CharField()
-    email = forms.EmailField()
+    sender_name = forms.CharField()
+    email_to = forms.EmailField()
     message = forms.CharField(widget=forms.Textarea)
     
     def __init__(self, *args, **kwargs):
@@ -328,8 +328,8 @@ class EmailContactForm(forms.Form):
         super(EmailContactForm, self).__init__(*args, **kwargs)
     
     def save(self):
-        name = self.cleaned_data['name']
-        email = self.cleaned_data['email']
+        name = self.cleaned_data['sender_name']
+        email = self.cleaned_data['email_to']
         message = self.cleaned_data['message']
         subject = 'IAS Individual Contact Form'
         messages = []

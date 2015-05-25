@@ -9,6 +9,12 @@ ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'alvian.kurnianto@coassets.com'
+EMAIL_HOST_PASSWORD = '4lvi4np4ssword'
+EMAIL_USE_TLS = True
+
 MANAGERS = ADMINS
 DATABASES = {
     'default': {

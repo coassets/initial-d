@@ -69,29 +69,28 @@
 
 
 <div class="row container" style="margin-bottom: 40px;">
-<div class="large-12 columns">
-<form id="create-edit-business" action="" method="post" accept-charset="utf-8">
-    {% csrf_token %}
-    <div class="reg_form" >
-                    <div class="sky-form">
-                        <header>{% if not business %}Create {% trans "Business" %}{% else %}Edit {{ business }}{% endif %}</header>
-        </div>
-        {{ business_form.as_p }}
-        <table class='vertical'>
-		
-        {% include 'contactinfo/_create_edit_location.html' %}
-		<tr>
-			<td>&nbsp;</td>
-			<td class='submit'>
-				<input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type='button' value='Cancel' onclick='history.go(-1)' />
-				&nbsp;
-				<input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type='submit' name='submit' value='Save &rarr;' />
-			</td>
-		</tr>
-	</table>
-    </div>
-	
-</form>
-</div>
+	<div class="large-12 columns">
+		<form id="create-edit-business" action="" method="post" accept-charset="utf-8">
+			{% csrf_token %}
+			<div class="reg_form" >
+				<div class="sky-form">
+					<header>{% if not business %}Create {% trans "Business" %}{% else %}Edit {{ business }}{% endif %}</header>
+				</div>
+			{{ business_form.as_p }}
+				<table class='vertical'>
+			
+					{% include 'contactinfo/_create_edit_location.html' %}
+					<tr>
+						<td>&nbsp;</td>
+						<td class='submit'>
+							<input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type='button' value='Cancel' onclick='history.go(-1)' />
+							&nbsp;
+							<input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type='submit' name='submit' value='Save &rarr;' />
+						</td>
+					</tr>
+				</table>
+			</div>	
+		</form>
+	</div>
 </div>
 {% endblock %}

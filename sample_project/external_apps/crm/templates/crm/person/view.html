@@ -20,8 +20,13 @@
 </ul>
 
 <table class='vertical' id='person-profile'>
-	{% if contact.picture %}
-	<img src="{{contact.picture.url}}" style="width:100px;">
+	{% if contact.picture %}	
+		<img src="{{contact.picture.url}}" class="circular">
+		
+	{% else %}
+		<img src="{{ MEDIA_URL }}picture/profile_avatar_default.png" class="circular">
+		
+		
 	{% endif %}
 {% if contact.email %}
     <tr>

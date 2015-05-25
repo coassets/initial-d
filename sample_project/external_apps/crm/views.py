@@ -306,7 +306,7 @@ def register_person(request):
             email = {
                 'template': 'crm/person/new_account_email.txt',
                 'subject': 'Your account information',
-                'extra_context': { 'app_url_base': settings.APP_URL_BASE },
+                #'extra_context': { 'app_url_base': settings.APP_URL_BASE },
             }
             user = form.save(email)
             return HttpResponseRedirect(reverse('auth_login'))

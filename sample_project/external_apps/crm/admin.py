@@ -80,4 +80,3 @@ class ContactRelationshipAdmin(admin.ModelAdmin):
     list_filter = ('start_date', 'end_date',)
     order_by = ('start_date',)
 admin.site.register(crm.ContactRelationship, ContactRelationshipAdmin)
-

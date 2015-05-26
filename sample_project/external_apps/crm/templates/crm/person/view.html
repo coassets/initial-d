@@ -56,7 +56,7 @@
     </tr>
 {% endif %}
 </table>
-
+<br style='clear: both;'></br>
 {% if perms.crm.view_profile %}
     {% ifnotequal contact.business_relations.count 0 %}
         <h3>Businesses</h3>
@@ -78,5 +78,5 @@
     {% include 'crm/interaction/_list.html' %}
 {% endif %}
 
-<br style='clear: both;' />
+<br style='clear: both;' ></br>
 {% endblock %}

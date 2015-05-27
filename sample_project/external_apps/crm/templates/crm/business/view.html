@@ -37,6 +37,7 @@
     </ul>
 	<form id="add-contact" action='{% url associate_contact business_id=business.id,action="add" %}?next={% url view_business business_id=business.id %}' method="post" accept-charset="utf-8">
 		<div class="field-wrapper">
+			<p>Add a contact by typing in the name of existing Person:</p>
 		    {{ add_contact_form.contact }}
 			<input class="but_small1" style="border:none;cursor:pointer;cursor:hand;" type="submit" name="submit" value="Add" id="submit" />
 		</div>

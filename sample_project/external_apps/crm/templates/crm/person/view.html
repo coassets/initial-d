@@ -62,7 +62,19 @@
         <h3>Businesses</h3>
         <ul class='businesses person'>
         {% for business in contact.business_relations.select_related %}
-            <li><a href='{% url view_business business_id=business.id %}'>{{ business.name }}</a></li>
+            <li><a href='{% url view_business business_id=business.id %}'>
+				{{business.name}}
+				(
+				{% for relation in relation%}						
+						{% if contact|striptags == relation.to_contact|striptags %}
+							{% for tipe in relation.types.all%} 
+								{{tipe}} 						
+							{% endfor %}
+						{% endif %}
+					{% endfor%}
+				)
+				</a>
+			</li>
         {% endfor %}
         </ul>
     {% endifnotequal %}

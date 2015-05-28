@@ -161,10 +161,13 @@ def view_person(request, person_id):
         'project__business',
     )[0:10]
     
+    relation=crm.ContactRelationship.objects.all()
+    
     context = {
         'contact': person,
         'interactions': interactions,
         'can_edit': person.is_editable_by(request.user),
+        'relation':relation,
     }
     return context
 
@@ -442,6 +445,7 @@ def list_businesses(request):
     context = {
         'form': form,
         'businesses': businesses,
+        
     }
     return context
 
@@ -450,11 +454,11 @@ def list_businesses(request):
 @render_with('crm/business/view.html')
 def view_business(request, business):
     add_contact_form = crm_forms.AssociateContactForm()
-    relasi=crm.ContactRelationship.objects.all()
+    relation=crm.ContactRelationship.objects.all()
     context = {
         'business': business,
         'add_contact_form': add_contact_form,
-        'relasi':relasi
+        'relation':relation,
     }
     
     try:

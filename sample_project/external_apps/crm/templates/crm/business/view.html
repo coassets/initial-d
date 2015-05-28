@@ -34,9 +34,9 @@
 			<a href='{% url view_person person_id=contact.id %}'>
 				{{ contact.get_full_name }} 
 				( 
-					{% for relasi in relasi%}						
-						{% if contact.get_full_name|striptags == relasi.to_contact|striptags %}
-							{% for tipe in relasi.types.all%} 
+					{% for relation in relation%}						
+						{% if contact.get_full_name|striptags == relation.to_contact|striptags %}
+							{% for tipe in relation.types.all%} 
 								{{tipe}} 						
 							{% endfor %}
 						{% endif %}

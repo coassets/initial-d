@@ -450,9 +450,11 @@ def list_businesses(request):
 @render_with('crm/business/view.html')
 def view_business(request, business):
     add_contact_form = crm_forms.AssociateContactForm()
+    relasi=crm.ContactRelationship.objects.all()
     context = {
         'business': business,
         'add_contact_form': add_contact_form,
+        'relasi':relasi
     }
     
     try:

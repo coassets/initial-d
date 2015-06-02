@@ -159,11 +159,12 @@
 	float:left;
 	display:block;
 	width:100%;
-	min-height: 50px;
+	min-height: 70px;
 	margin-top:0px;
 	position: relative;
 	text-indent:-999em;
-	background:url('/site_media/index_02.png') no-repeat left top;
+	background:url('/site_media/images/company.png') no-repeat left top;
+	background-size: 50%;
 }
 /* bigger logo? remove below comment */
 /*#logo {
